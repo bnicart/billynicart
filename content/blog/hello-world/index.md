@@ -1,6 +1,6 @@
 ---
 title: Hello World
-date: "2020-03-26"
+date: "2020-03-26T00:00:00.000Z"
 description: "Hello World"
 ---
 
