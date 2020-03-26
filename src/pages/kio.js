@@ -46,9 +46,14 @@ const Kio = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <SEO title="Kio" />
 
-        <h1 style={{textAlign: `center`}}>Billy & Yen</h1>
+        <div style={{textAlign: `center`, fontWeight: `bold`, fontSize: `50px`}}>Billy & Yen</div>
+        <div style={{textAlign: `center`, marginBottom: `10px`}}>
+          <span>since &nbsp;</span>
+          <span style={{textDecoration: `underline`}}>October 07, 2012</span>
+          <span>&nbsp; for</span>
+        </div>
         <CounterBox />
-        <h4 style={{textAlign: `center`}}>and counting!!!</h4>
+        <div style={{textAlign: `center`, marginTop: `10px`}}>and counting!!!</div>
       </Layout>
     </div>
   )
