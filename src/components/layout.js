@@ -15,7 +15,8 @@ const Layout = ({ location, title, children }) => {
           marginBottom: rhythm(1.5),
           marginTop: 0,
           textAlign: `center`,
-          color: `#00BEFF`
+          color: `#00BEFF`,
+          fontFamily: 'fantasy'
         }}
       >
         <Link
@@ -34,7 +35,7 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h3
         style={{
-          fontFamily: `Montserrat, sans-serif`,
+          fontFamily: `fantasy, sans-serif`,
           marginTop: 0,
           color: `#00BEFF`
         }}
@@ -55,18 +56,21 @@ const Layout = ({ location, title, children }) => {
   return (
     <div
       style={{
-        // marginLeft: `auto`,
-        // marginRight: `auto`,
         margin: `${rhythm(3 / 4)} auto`,
-        maxWidth: rhythm(24),
+        maxWidth: rhythm(30),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         border: `1px solid #00BEFF`,
-        boxShadow: `3px 3px #00BEFF`
+        boxShadow: `3px 3px #00BEFF`,
+        backgroundColor: `#FFF`
       }}
     >
       <header>{header}</header>
       <main>{children}</main>
-      <footer>
+      <footer
+        style={{
+          textAlign: `center`
+        }}
+      >
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
