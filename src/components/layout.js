@@ -14,13 +14,15 @@ const Layout = ({ location, title, children }) => {
           ...scale(1.5),
           marginBottom: rhythm(1.5),
           marginTop: 0,
+          textAlign: `center`,
+          color: `#00BEFF`
         }}
       >
         <Link
           style={{
             boxShadow: `none`,
             textDecoration: `none`,
-            color: `inherit`,
+            color: `inherit`
           }}
           to={`/`}
         >
@@ -34,6 +36,7 @@ const Layout = ({ location, title, children }) => {
         style={{
           fontFamily: `Montserrat, sans-serif`,
           marginTop: 0,
+          color: `#00BEFF`
         }}
       >
         <Link
@@ -52,10 +55,13 @@ const Layout = ({ location, title, children }) => {
   return (
     <div
       style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
+        // marginLeft: `auto`,
+        // marginRight: `auto`,
+        margin: `${rhythm(3 / 4)} auto`,
         maxWidth: rhythm(24),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        border: `1px solid #00BEFF`,
+        boxShadow: `3px 3px #00BEFF`
       }}
     >
       <header>{header}</header>

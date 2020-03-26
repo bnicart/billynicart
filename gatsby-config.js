@@ -1,14 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Billy's Blog`,
+    title: `Billy's Thoughts`,
     author: {
       name: `Billy Nicart`,
-      summary: `who loves to learn and build useful things!`,
+      summary: `who loves to learn and build things!`,
     },
     description: `My starter blog.`,
     siteUrl: `https://billynicart.netlify.com/`,
     social: {
       twitter: `itsmebilly1201`,
+      github: 'bnicart'
     },
   },
   plugins: [
