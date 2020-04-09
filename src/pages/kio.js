@@ -7,35 +7,53 @@ import SEO from "../components/seo"
 import moment from 'moment';
 import 'moment-precise-range-plugin';
 
-const sinceThen = () => {
+const sinceThen = (now) => {
   const starts = moment('2012-10-07');
-  const now = moment();
+  // const now = moment();
 
   return moment.preciseDiff(starts, now, true);
 }
 
-const CounterBox = () => {
+class Clock extends React.Component {
+	constructor(props) {
+	  super(props);
+	  this.state = {time: moment()};
+	}
 
-  let since = sinceThen();
+  componentDidMount() {
+	  this.timerID = setInterval(() => this.tick(), 1000);
+	}
 
-  return (
-    <div
-      style={{
-        border: `1px solid pink`,
-        textAlign: `center`,
-        boxShadow: `3px 3px pink`,
-        fontWeight: `bold`,
-        fontSize: `25px`
-      }}
-    >
-      { `${sinceThen().years} years, ` }
-      { `${sinceThen().months} months, ` }
-      { `${sinceThen().days} days, ` }
-      { `${sinceThen().hours} hours, ` }
-      { `${sinceThen().minutes} minutes, ` }
-      { `${sinceThen().seconds} seconds` }
-    </div>
-  )
+  componentWillUnmount() {
+	  clearInterval(this.timerID);
+	}
+
+  tick() {
+	  this.setState({time: moment()});
+	}
+
+  render() {
+    let since = sinceThen(this.state.time);
+
+    return (
+      <div
+        style={{
+          border: `1px solid pink`,
+          textAlign: `center`,
+          boxShadow: `3px 3px pink`,
+          fontWeight: `bold`,
+          fontSize: `25px`
+        }}
+      >
+        { `${since.years} years, ` }
+        { `${since.months} months, ` }
+        { `${since.days} days, ` }
+        { `${since.hours} hours, ` }
+        { `${since.minutes} minutes, ` }
+        { `${since.seconds} seconds` }
+      </div>
+    )
+  }
 }
 
 const Kio = ({ data, location }) => {
@@ -52,7 +70,7 @@ const Kio = ({ data, location }) => {
           <span style={{textDecoration: `underline`}}>October 07, 2012</span>
           <span>&nbsp; for</span>
         </div>
-        <CounterBox />
+        <Clock />
         <div style={{textAlign: `center`, marginTop: `10px`}}>and counting!!!</div>
       </Layout>
     </div>
