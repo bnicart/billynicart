@@ -1,7 +1,7 @@
 ---
 title: Ionic Anyone?
 date: "2020-03-26T14:40:10.000Z"
-description: "Hello World"
+description: "Why I use Ionic Framework"
 ---
 
 I've started playing around with [Ionic Framework](https://ionicframework.com/) again just recently.
