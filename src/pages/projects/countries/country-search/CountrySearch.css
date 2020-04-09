@@ -1,0 +1,11 @@
+.country-search {
+  display: block;
+}
+
+.country-search input[type="text"] {
+  width: 30%;
+  border: 1px solid black;
+  text-align: center;
+  border-style: outset;
+  padding: 10px;
+}

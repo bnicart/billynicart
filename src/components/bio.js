@@ -39,27 +39,35 @@ const Bio = () => {
   return (
     <div
       style={{
-        display: `flex`,
-        marginBottom: rhythm(2.5),
+        // display: `flex`,
+        marginBottom: rhythm(2.5)
       }}
     >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author.name}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />
-      <p>
-        Written by <strong>{author.name}</strong> {author.summary}
-        {` `}
-      </p>
+      <div style={{ display: `inline-block` }}>
+        <Image
+          fixed={data.avatar.childImageSharp.fixed}
+          alt={author.name}
+          style={{
+            marginRight: rhythm(1 / 2),
+            marginBottom: 0,
+            minWidth: 50,
+            borderRadius: `100%`
+          }}
+          imgStyle={{borderRadius: `50%`}}
+        />
+      </div>
+      <div style={{ display: `inline-block` }}>
+        <div>
+          Written by <strong>{author.name}</strong> {author.summary}
+        </div>
+        <div>
+          <span>&nbsp;|&nbsp;</span>
+          <a href="/">Blogs</a>
+          <span>&nbsp;|&nbsp;</span>
+          <a href="/projects">Projects</a>
+          <span>&nbsp;|&nbsp;</span>
+        </div>
+      </div>
     </div>
   )
 }
