@@ -57,12 +57,13 @@ const Layout = ({ location, title, children }) => {
     <div
       style={{
         margin: `${rhythm(3 / 4)} auto`,
-        maxWidth: rhythm(30),
+        maxWidth: rhythm(33),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        border: `1px solid #00BEFF`,
-        boxShadow: `3px 3px #00BEFF`,
+        // border: `1px solid #00BEFF`,
+        // boxShadow: `3px 3px #00BEFF`,
         backgroundColor: `#FFF`
       }}
+      className="card"
     >
       <header>{header}</header>
       <main>{children}</main>

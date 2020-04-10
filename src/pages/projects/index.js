@@ -1,6 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
+import "../../styles/bootstrap.min.css"
+
 import Bio from "../../components/bio"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
@@ -16,7 +18,7 @@ const ProjectIndex = ({ data, location }) => {
       <Bio />
 
       <ul style={{listStyle: `none`}}>
-        <li><a href="/projects/countries">Country List</a></li>
+        <li><a href="/projects/countries">Country List(with COVID-19 data)</a></li>
       </ul>
     </Layout>
   )

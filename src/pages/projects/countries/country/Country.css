@@ -1,12 +1,12 @@
 .country {
-  margin: 15px;
+  /* margin: 15px;
   padding: 5px 10px;
   border: 10px solid #DDD;
   border-style: outset;
   vertical-align: top;
   cursor: pointer;
   width: fit-content;
-  display: inline-block;
+  display: inline-block; */
 }
 
 .country > .country-name {

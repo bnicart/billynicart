@@ -61,17 +61,19 @@ export default class CountryList extends React.Component {
     });
 
     if (isLoading) {
-      return <div className="center">Country list is loading...</div>
+      return <div className="text-center">Country list is loading...</div>
     } else {
       return (
         <div className="country-list-container">
           <CountrySearch handleSearch={this.handleSearch} />
-          <p><small>{ filteredCountries.length } countries found...</small></p>
-          {
-            filteredCountries.map((country) => {
-              return <Country data={country} covid={this.getCountryCovidData(country.alpha2Code)} key={country.name} />;
-            })
-          }
+          <div className="text-center"><small>{ filteredCountries.length } countries found...</small></div>
+          <div className="row">
+            {
+              filteredCountries.map((country) => {
+                return <Country data={country} covid={this.getCountryCovidData(country.alpha2Code)} key={country.name} />;
+              })
+            }
+          </div>
         </div>
       );
     }
