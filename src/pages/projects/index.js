@@ -17,8 +17,8 @@ const ProjectIndex = ({ data, location }) => {
       <SEO title="Projects" />
       <Bio />
 
-      <ul style={{listStyle: `none`}}>
-        <li><a href="/projects/countries">Country List(with COVID-19 data)</a></li>
+      <ul className="list-group list-group-flush">
+        <li className="list-group-item"><a href="/projects/countries">Country List(with COVID-19 data)</a></li>
       </ul>
     </Layout>
   )
