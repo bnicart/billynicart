@@ -41,7 +41,7 @@ export default class Country extends React.Component {
     }
 
     return (
-      <div className="country col-2">
+      <div className="country col-md-2">
         <div className="card">
           <img src={country.flag} className="card-img-top" alt={`${country.name}'s flag`} />
           <div className="">
