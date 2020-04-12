@@ -31,10 +31,12 @@ export default class Country extends React.Component {
       let lastUpdatedAt = (new Date(covid.lastUpdated)).toString().split(' (Philippine Standard Time)')[0]
 
       covidData = <div>
-        <p className="text-primary card-text">Last Updated: {lastUpdatedAt}</p>
-        <p className="text-primary card-text">Total Confirmed: {covid.totalConfirmed}</p>
-        <p className="text-primary card-text">Total Deaths: {covid.totalDeaths}</p>
-        <p className="text-primary card-text">Total Recovered: {covid.totalRecovered}</p>
+        <div className="text-primary card-text">Last Updated: {lastUpdatedAt}</div>
+        <div className="text-warning card-text">Daily Confirmed: {covid.dailyConfirmed}</div>
+        <div className="text-warning card-text">Total Confirmed: {covid.totalConfirmed}</div>
+        <div className="text-danger card-text">Daily Deaths: {covid.dailyDeaths}</div>
+        <div className="text-danger card-text">Total Deaths: {covid.totalDeaths}</div>
+        <div className="text-success card-text">Total Recovered: {covid.totalRecovered}</div>
       </div>
     } else {
       covidData = <div>No COVID-19 data for {this.state.country.name}</div>
