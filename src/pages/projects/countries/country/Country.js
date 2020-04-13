@@ -42,18 +42,21 @@ export default class Country extends React.Component {
       covidData = <div>No COVID-19 data for {this.state.country.name}</div>
     }
 
+    let notifyMe = <div className="text-center">
+      <hr />
+      <div>Want to get notified of new cases?</div>
+      <div><a href="https://covidalertph.com/" rel="noreferrer noopener" target="_blank">Subscribe here!</a></div>
+    </div>
+
     return (
       <div className="country col-md-2">
         <div className="card">
           <img src={country.flag} className="card-img-top" alt={`${country.name}'s flag`} />
-          <div className="">
-            <div className="text-bold"></div>
-
-          </div>
           <div className="card-body">
             <h5 className="card-title">{ country.name } ({ country.capital })</h5>
             <hr />
             { covidData }
+            { country.alpha2Code == 'PH' ? notifyMe : '' }
           </div>
         </div>
       </div>
