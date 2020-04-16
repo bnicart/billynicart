@@ -57,7 +57,12 @@ export default class CountryList extends React.Component {
     const { isLoading, countries, query } = this.state;
     let filteredCountries = [];
     filteredCountries = countries.filter((country) => {
-      return country.name.toLowerCase().includes(query.toLowerCase())
+      let condition = (
+        country.name.toLowerCase().includes(query.toLowerCase()) ||
+        country.region.toLowerCase().includes(query.toLowerCase()) ||
+        country.subregion.toLowerCase().includes(query.toLowerCase())
+      )
+      return condition
     });
 
     if (isLoading) {
