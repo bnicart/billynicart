@@ -11,3 +11,5 @@ I first encountered Ruby on Rails(RoR) from my work back in 2014. It was the req
 Putting up new API endpoints and integrating them on the frontend, doing some business-logic updates & eventually new features. For a web developer, it's a fulfilling to see your work live and being used by people.
 
 Fast-forward to present days, I still can't say that I'm an expert in using RoR. I still have a long way to go in order to reach that stage. But nonetheless, I'll still personally recommend [Ruby on Rails](https://rubyonrails.org/) to aspiring web developers!
+
+And, that would be all for now. Until the next article! See yah!
